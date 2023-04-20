@@ -1,0 +1,21 @@
+{
+    "name": "james-minor/kosmoss",
+    "description": "A PHP-based content management system.",
+    "type": "project",
+    "autoload": {
+        "psr-0": {
+            "Kosmoss\\": "src/"
+        },
+        "files": [
+            "src/Kosmoss/constants.php"
+        ]
+    },
+    "require": {
+        "php": ">=8.0",
+        "ext-mysqli": "*",
+        "ext-curl": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10"
+    }
+}

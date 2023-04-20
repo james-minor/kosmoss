@@ -1,0 +1,4 @@
+# Denying requests to see any file that starts with a leading period (ensures all config files are denied access).
+<Files ~ "^[.]">
+    require all denied
+</Files>

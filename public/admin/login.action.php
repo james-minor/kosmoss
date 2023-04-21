@@ -1,6 +1,6 @@
 <?php
 
-use Kosmoss\FileUtilities\EnvironmentVariableHandler;
+use Kosmoss\FileUtilities\EnvironmentFileHandler;
 use Kosmoss\Database\SQLConnectionHandler;
 
 session_start();
@@ -46,7 +46,7 @@ if(!empty($_SESSION['admin-username-error']) or !empty($_SESSION['admin-password
 
 /* Attempting connection to the SQL database.
  */
-$environmentVariables = EnvironmentVariableHandler::parseENVFile('../.env');
+$environmentVariables = EnvironmentFileHandler::parseENVFile('../.env');
 if(!SQLConnectionHandler::connect())
 {
     header('Location: ../error.php', true, 500);

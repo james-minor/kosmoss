@@ -2,7 +2,7 @@
 
 namespace Kosmoss\Database;
 
-use Kosmoss\FileUtilities\EnvironmentVariableHandler;
+use Kosmoss\FileUtilities\EnvironmentFileHandler;
 use Kosmoss\FileUtilities\LogManager;
 
 use mysqli;
@@ -21,7 +21,7 @@ class SQLConnectionHandler
     static function connect(): bool
     {
         // Attempting to initialize a database connection.
-        $environmentVariables = EnvironmentVariableHandler::parseENVFile('.env');
+        $environmentVariables = EnvironmentFileHandler::parseENVFile('.env');
         try
         {
             self::$sqlConnection = new mysqli(

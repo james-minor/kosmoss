@@ -5,7 +5,7 @@
 
 <html lang="en">
     <head>
-        <title>Hamilton CMS | Sign in to Admin Portal</title>
+        <title>Kosmoss CMS | Sign in to Admin Portal</title>
     </head>
     <body>
         <form method="post" action="login.action.php">
